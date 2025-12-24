@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestro Wrapped 2025 💚</title>
+
+<!-- Fuente -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+  html, body { height: 100%; overflow: hidden; background: #000; color: white; }
+  #stories { height: 100%; width: 100%; display: flex; flex-direction: column; transition: transform 0.8s ease-in-out; }
+
+  .story {
+    width: 100%; flex-shrink: 0;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; position: relative; padding: 40px; overflow: hidden;
+  }
+
+  /* Fondos */
+  .cover { background: linear-gradient(135deg, #1db954, #191414); }
+  .stats { background: #000; }
+  .month { background: linear-gradient(135deg, #7f00ff, #e100ff); }
+  .month.alt { background: linear-gradient(135deg, #ff6a00, #ee0979); }
+  .footer { background: linear-gradient(135deg, #1db954, #004d25); }
+
+  h1 { font-size: 2.8rem; margin-bottom: 20px; }
+  h2 { font-size: 2.2rem; margin-bottom: 15px; }
+  p { font-size: 1.2rem; max-width: 90%; }
+  .stat { font-size: 3rem; font-weight: 800; margin: 10px 0; color: #1db954; }
+
+  /* Flecha animada suavemente */
+  .arrow {
+    position: absolute;
+    bottom: 40px;
+    font-size: 2rem;
+    opacity: 0.8;
+    animation: floatArrow 2.5s ease-in-out infinite;
+    cursor: pointer;
+  }
+  @keyframes floatArrow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* Fade-in del texto */
+  .story > :not(.arrow):not(.story-img) { 
+    opacity: 0; 
+    transform: translateY(10px); 
+    animation: fadeIn 0.6s ease-out forwards; 
+    animation-delay: 0.2s; 
+  }
+  @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+  /* Imagen de cada mes */
+  .story-img {
+    width: 80%;            
+    max-height: 50%;       
+    object-fit: cover;     
+    margin-top: 20px;
+    border-radius: 15px;   
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    opacity: 1; /* siempre visible */
+    animation: fadeIn 0.6s ease-out forwards;
+    animation-delay: 0.3s; 
+  }
+</style>
+</head>
+<body>
+
+<!-- Música de fondo -->
+<audio id="bg-music" src="./audio/song.mp3" loop></audio>
+
+<div id="stories">
+
+  <section class="story cover">
+    <h1>Nuestro Wrapped 2025</h1>
+    <p>Un año contigo resumido en recuerdos 💚</p>
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story stats">
+    <h2>Lo más escuchado</h2>
+    <div class="stat">12</div>
+    <p>Meses juntos</p>
+    <div class="stat">∞</div>
+    <p>Momentos felices</p>
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <!-- Meses -->
+  <section class="story month">
+    <h2>Enero</h2>
+    <p>Empezamos el año con nuestro colega la roca 🪨</p>
+    <img src="./img/enero.jpg" alt="Enero con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month alt">
+    <h2>Febrero</h2>
+    <p>Nuestro paso por volrace ❤️</p>
+    <img src="./img/febrero.jpg" alt="Febrero con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month">
+    <h2>Marzo</h2>
+    <p>Tu y tus caras ajajaja</p>
+    <img src="./img/marzo.jpg" alt="Marzo con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month alt">
+    <h2>Abril</h2>
+    <p>Pasas más tiempo en mi casa que en la tuya, te quiero mazo mmg ❤️</p>
+    <img src="./img/abril.jpg" alt="Abril con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month">
+    <h2>Mayo</h2>
+    <p>Una de las tantas veces que vamos al cine juntos 🎥</p>
+    <img src="./img/mayo.jpg" alt="Mayo con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month alt">
+    <h2>Junio</h2>
+    <p>Nuestras vacaciones en el pueblo ☀️</p>
+    <img src="./img/junio.jpg" alt="Junio con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month">
+    <h2>Julio</h2>
+    <p>Lo bien que lo pasamos en el parque de atracciones, de lo mejor del año sin duda 🎢</p>
+    <img src="./img/julio.jpg" alt="Julio con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month alt">
+    <h2>Agosto</h2>
+    <p>Los viajes que hicimos con la Asia y la cara de velocidad que tiene en todas las fotos 😂</p>
+    <img src="./img/agosto.jpg" alt="Agosto con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month">
+    <h2>Septiembre</h2>
+    <p>Vaya locura de mes que fue, conseguimos hacerte tu rinconcito 😎</p>
+    <img src="./img/septiembre.jpg" alt="Septiembre con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month alt">
+    <h2>Octubre</h2>
+    <p>Nos destrozan a nuestro hijo 😤</p>
+    <img src="./img/octubre.jpg" alt="Octubre con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month">
+    <h2>Noviembre</h2>
+    <p>Nos escapamos al centro de Madrid a comer al ramen kagura, tremendo descubrimiento 🍜</p>
+    <img src="./img/noviembre.jpg" alt="Noviembre con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story month alt">
+    <h2>Diciembre</h2>
+    <p>Se une a la familia Mikan 🍊</p>
+    <img src="./img/diciembre.jpg" alt="Diciembre con mi novia" class="story-img">
+    <div class="arrow"><i class="bi bi-chevron-down"></i></div>
+  </section>
+
+  <section class="story footer">
+    <h1>Lo mejor del año</h1>
+    <p>Eres tú.<br>Feliz 25 cumpleaños 🎂💚</p>
+  </section>
+
+</div>
+
+<script>
+let currentIndex = 0;
+const stories = document.querySelectorAll('.story');
+const container = document.getElementById('stories');
+const audio = document.getElementById('bg-music');
+let audioStarted = false;
+
+// Ajuste altura dinámica para móviles
+function setStoryHeight() {
+  stories.forEach(story => story.style.height = window.innerHeight + 'px');
+}
+window.addEventListener('resize', setStoryHeight);
+window.addEventListener('load', setStoryHeight);
+
+// Mostrar historia
+function showStory(index){
+  const offset = -index * window.innerHeight;
+  container.style.transform = `translateY(${offset}px)`;
+
+  // reinicia animación de imagen
+  const img = stories[index].querySelector('.story-img');
+  if(img){
+    img.style.animation = 'none';
+    void img.offsetWidth; // fuerza reflow
+    img.style.animation = 'fadeIn 0.6s ease-out 0.3s forwards';
+  }
+}
+
+// Flechas
+document.querySelectorAll('.arrow').forEach(arrow=>{
+  arrow.addEventListener('click', ()=>{
+    if(!audioStarted){
+      audio.play().then(()=>{
+        audio.volume = 0;
+        let vol = 0;
+        const fadeIn = setInterval(()=>{
+          vol += 0.02;
+          if(vol >= 1){ vol = 1; clearInterval(fadeIn); }
+          audio.volume = vol;
+        }, 50);
+      }).catch(()=>{});
+      audioStarted = true;
+    }
+
+    if(currentIndex < stories.length - 1){
+      currentIndex++;
+      showStory(currentIndex);
+    }
+  });
+});
+
+// Swipe en móviles
+let startY = 0;
+document.addEventListener('touchstart', e => { startY = e.touches[0].clientY; });
+document.addEventListener('touchend', e => {
+  let endY = e.changedTouches[0].clientY;
+  if(startY - endY > 50 && currentIndex < stories.length - 1){
+    currentIndex++;
+    showStory(currentIndex);
+  } else if(endY - startY > 50 && currentIndex > 0){
+    currentIndex--;
+    showStory(currentIndex);
+  }
+});
+</script>
+
+</body>
+</html>
